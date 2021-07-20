@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>○×ゲーム</title>
+</head>
+
+<style>
+    table{
+        border-collapse: collapse;
+        margin-left: 30px;
+    }
+
+    table td {
+        border: 1px solid #111111;
+        width: 150px;
+        height: 150px;
+        /* visibility:hidden; */
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>○×ゲーム</h1>
+    <table>
+        <tr>
+            <td><input type="button" value="button" onclick="buttonClick()"></td>
+            <td><input type="button" value="button" onclick="buttonClick()"></td>
+            <td><input type="button" value="button" onclick="buttonClick()"></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    // getElementById:任意のHTMLタグで指定したIDにマッチするドキュメント要素を取得するメソッド
+    const counter = document.getElementById("counter");
+    let count = 0;
+    counter.addEventListener("click",
+        // function(){処理}
+        // function(){ 変更↓
+        () => {
+            // count++ 変更↓
+            count = count + 2;
+            // textContent:テキスト情報のみを取得,出力する
+            counter.textContent = count;
+        })
+</script>
+
+</html>

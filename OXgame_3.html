@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>○×ゲーム</title>
+</head>
+
+<style>
+    .board {
+        width: 500px;
+    }
+
+    input {
+        border: 1px solid #111111;
+        width: 150px;
+        height: 150px;
+        /* visibility:hidden; */
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* input[value="ボタン"]{
+        font-size: 20px;
+    } */
+
+</style>
+
+<body>
+    <h1>○×ゲーム</h1>
+    <div class="board">
+        <input type="button" value="ボタン" id="b" onclick="buttonClick()">
+    </div>
+<!-- あとでけす -->
+    <div id="edit_area1"></div>
+</body>
+
+<script>
+var counter1 = 0;
+function buttonClick(){
+    document.getElementById("b").value = '○';
+    counter1++;
+    var str = counter1 + "回目のクリックです。";
+    document.getElementById('edit_area1').textContent = str;
+}
+
+</script>
+
+</html>

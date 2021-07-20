@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .board {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 450px;
+      }
+
+      .board div {
+        height: 150px;
+        width: 150px;
+        border: 1px solid black;
+        line-height: 150px;
+      }
+
+      .maru {
+        color: red;
+        font-size: 80px;
+        text-align: center;
+      }
+
+      .batu {
+        color: blue;
+        font-size: 80px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="board"></div>
+  </body>
+
+  <script>
+    let count = 0;
+    const checkList = Array(9).fill(0);
+
+    for (let i = 0; i < 9; i++) {
+      // div要素の生成
+      const masu = document.createElement("div");
+
+      masu.addEventListener("click", () => {
+        if (checkList[i] === 0) {
+          if (count % 2 === 0) {
+            masu.setAttribute("class", "maru");
+            masu.textContent = "◯";
+            checkList[i] = "◯";
+          } else {
+            masu.setAttribute("class", "batu");
+            masu.textContent = "×";
+            checkList[i] = "×";
+          }
+          count++;
+        }
+      });
+      //   「querySelector()」は、JavaScriptから
+      // 任意のHTML要素を検出・取得することができるメソッド
+      //appendChildは、特定の親要素の中に要素を追加するためのメソッド
+      // 追加される場所は親要素の末尾
+      document.querySelector(".board").appendChild(masu);
+    }
+
+    document.querySelector(".board").addEventListener("click", function () {
+      columnA = [checkList[0], checkList[3], checkList[6]];
+      columnB = [checkList[1], checkList[4], checkList[7]];
+      columnC = [checkList[2], checkList[5], checkList[8]];
+      // ヨコ
+      rowA = [checkList[0], checkList[1], checkList[2]];
+      rowB = [checkList[3], checkList[4], checkList[5]];
+      rowC = [checkList[6], checkList[7], checkList[8]];
+      // ナナメ
+      diagonalA = [checkList[0], checkList[4], checkList[8]];
+      diagonalB = [checkList[2], checkList[4], checkList[6]];
+      
+      function checkWin(checkArray) {
+        if (checkArray.every((n) => n === "◯")) {
+          // checkListを全て埋める
+          checkList.fill("1");
+          // 勝敗を表示する
+          const winA = document.createElement("div");
+          winA.textContent = "Aの勝ち！";
+          winA.setAttribute("class", "win");
+          document.body.appendChild(winA);
+        } else if (checkArray.every((n) => n === "×")) {
+          // checkListを全て埋める
+          checkList.fill("1");
+          // 勝敗を表示する
+          const winB = document.createElement("div");
+          winB.textContent = "Bの勝ち！";
+          winB.setAttribute("class", "win");
+          document.body.appendChild(winB);
+        }
+      }
+
+      checkWin(columnA);
+      checkWin(columnB);
+      checkWin(columnC);
+      checkWin(rowA);
+      checkWin(rowB);
+      checkWin(rowC);
+      checkWin(diagonalA);
+      checkWin(diagonalB);
+    });
+  </script>
+</html>

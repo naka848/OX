@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>○×ゲーム</title>
+</head>
+
+<style>
+    table{
+        border-collapse: collapse;
+        margin-left: 30px;
+    }
+
+    table td {
+        border: 1px solid #111111;
+        width: 150px;
+        height: 150px;
+        /* visibility:hidden; */
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>○×ゲーム</h1>
+    <table>
+        <tr>
+            <td id="A"></td>
+            <td id="B"></td>
+            <td id="C"></td>
+        </tr>
+        <tr>
+            <td id="D"></td>
+            <td id="E"></td>
+            <td id="F"></td>
+        </tr>
+        <tr>
+            <td id="G"></td>
+            <td id="H"></td>
+            <td id="I"></td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    var counter = 0;
+    document.getElementById("A").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+    document.getElementById("B").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+    document.getElementById("C").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+    document.getElementById("D").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+    document.getElementById("E").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+    document.getElementById("F").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+    document.getElementById("G").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+    document.getElementById("H").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+    document.getElementById("I").addEventListener("click", function () {
+        counter++;
+        if (counter < 10){
+        if (counter % 2 == 0){
+        this.textContent = "○";
+        }
+        else{
+            this.textContent = "×";
+        }
+    }
+    })
+</script>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>○×ゲーム</title>
+</head>
+
+<style>
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 150px 150px 150px;
+    }
+
+    li {
+        width: 150px;
+        height: 150px;
+        margin: 0;
+        padding: 0;
+        font-size: 50px;
+        border: 1px black solid;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+    <h1>○×ゲーム</h1>
+    <ul>
+
+    </ul>
+</body>
+
+<!-- これを配列にして、配列の中身を確認するEVERYで確認 -->
+<!-- 中身をTRUEかFALSEにして、判定できるようにする -->
+
+<script>
+    // 配列作成
+    hairetu = ["A", "B", "C","D","E","F","G","H","I"]
+
+    // function 関数名(引数) { 処理 }
+    function createLi(b) {
+        const li = document.createElement("li");
+        li.textContent = hairetu[b];
+        li.setAttribute("id", b);
+        document.querySelector("ul").appendChild(li)
+    }
+
+   // btnに配列 hairetuの中身を順番に入れる
+    for (const btn of hairetu) {
+        createLi(btn)
+    }
+
+    var counter = 0;
+    document.getElementById("A").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+    document.getElementById("B").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+    document.getElementById("C").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+    document.getElementById("D").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+    document.getElementById("E").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+    document.getElementById("F").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+    document.getElementById("G").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+    document.getElementById("H").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+    document.getElementById("I").addEventListener("click", function () {
+        counter++;
+        if (counter < 10) {
+            if (counter % 2 == 0) {
+                this.textContent = "○";
+            }
+            else {
+                this.textContent = "×";
+            }
+        }
+    })
+</script>
+
+</html>

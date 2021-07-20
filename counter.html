@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #counter {
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        line-height: 200px;
+        font-size:100px;
+        border: 1px solid black;
+        margin: 10px 0 0 10px;
+    }
+</style>
+
+<body>
+    <div id="counter">0</div>
+</body>
+
+<script>
+    // getElementById:任意のHTMLタグで指定したIDにマッチするドキュメント要素を取得するメソッド
+    const counter = document.getElementById("counter");
+    let count = 0;
+    counter.addEventListener("click",
+    // function(){処理}
+    // function(){ 変更↓
+    () => {
+        // count++ 変更↓
+        count = count+2;
+        // textContent:テキスト情報のみを取得,出力する
+        counter.textContent = count;
+    })
+</script>
+
+</html>
